@@ -13,7 +13,7 @@ export const About: FC = () => {
 					<Highlight>{CONFIG.TITLE}...</Highlight>
 				</p>
 				<h1 className="text-5xl text-white font-prompt">
-					เว็บส่วนตัวครับ ทำขึ้นมาเล่นๆไม่จริงจัง
+					A personal website to test my skills.
 				</h1>
 				<div className="mt-4">
 					<p className="text-white text-md">
