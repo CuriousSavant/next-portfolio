@@ -3,6 +3,6 @@ export const CONFIG = {
   AKA: "Arm",
   NICKNAME: "CuriousSavant",
   LOCATION: "Thailand",
-  TITLE: "Junior Software Developer",
+  TITLE: "I build this website",
   AVATAR_URL: "/img.png",
 };

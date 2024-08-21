@@ -4,45 +4,32 @@ import React from 'react'
 import { CONFIG } from '@/lib/index'
 import Highlight from './Highlight'
 import { motion } from 'framer-motion'
+import { BsInstagram } from 'react-icons/bs'
 
 const Hero = () => {
   return (
     <div className='px-2.5 md:p-2 lg:p-0'>
       <div className='w-full mt-0 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-4'>
         <div className='flex flex-col pt-16 gap-4 mx-auto'>
-          <h1 className='text-5xl md:text-6xl tracking-tighter text-white'>
+          <h1 className='text-5xl md:text-6xl tracking-tighter text-white text-center md:text-start'>
             {CONFIG.NAME}
             <p className="text-3xl hidden md:block">
               <i>Aka&nbsp;</i>
               <Highlight>{CONFIG.AKA}</Highlight>
             </p>
           </h1>
-          <p className="mt-6 text-white text-md">
-            I am a 17 year old software developer living{" "}
-            in&nbsp;{CONFIG.LOCATION}.
-            <br />
-            <br />I have <Highlight>
-              over 2 years
-            </Highlight>{" "}
-            of experience in software development, and I am currently
-            working with&nbsp;
+          <p className="mt-6 text-white text-md text-center md:text-start">
+            I am {2024 - 2007}, still a student and not ready to take on work yet. Currently, I have various skills such as{" "}
             <LanguageLink
               name={"typescript"}
               href={"https://www.typescriptlang.org/"}
               color={"text-blue-500"}
-            />
-            ,&nbsp;
+            /> and,
             <LanguageLink
               name={"java"}
               href={"https://www.java.com/"}
               color={"text-yellow-600"}
-            />
-            &nbsp;and&nbsp;
-            <LanguageLink
-              name={"c++"}
-              href={"https://docs.microsoft.com/en-us/dotnet/csharp/"}
-              color={"text-pink-500"}
-            />
+            /> The main tools I use are just these for now. You can view my <Highlight>stack</Highlight> on the Stack page.
             <br />
           </p>
         </div>

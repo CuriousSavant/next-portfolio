@@ -8,7 +8,6 @@ import { FC } from "react";
 export const About: FC = () => {
 	return (
 		<div className="w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 text-center md:text-left">
-			{/* About Section */}
 			<div className="flex flex-col justify-center pt-16 md:pr-10">
 				<p className="text-md font-bold">
 					<Highlight>{CONFIG.TITLE}...</Highlight>
@@ -19,7 +18,7 @@ export const About: FC = () => {
 				<p className="mt-4 text-white text-md">
 					Hello! I'm {CONFIG.NAME}, a passionate Developer specializing in <Highlight>software</Highlight> and web applications. With experience in <Highlight>TypeScript</Highlight>, <Highlight>Java</Highlight>, and <Highlight>C++</Highlight>, I am currently enhancing my skills with <Highlight>Next.js</Highlight> and <Highlight>Prisma</Highlight>.
 					<br /><br />
-					I build <Highlight>full-stack applications</Highlight> using modern, scalable technologies and contribute to the <Highlight>open-source community</Highlight>. Always eager to learn and grow.
+					For anyone who wants to build upon what I've done, feel free to do so. I give my permission.
 				</p>
 			</div>
 

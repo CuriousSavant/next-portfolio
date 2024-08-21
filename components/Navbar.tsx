@@ -6,6 +6,7 @@ import { MdEmail, MdMenu } from 'react-icons/md';
 import { CONFIG } from '@/lib';
 import { motion, AnimatePresence } from 'framer-motion';
 import Highlight from './Highlight';
+import { BsInstagram } from 'react-icons/bs';
 
 const NavLinks = [
   {
@@ -106,7 +107,7 @@ const MobileDropDown = ({ currentPage, onLinkClick, closeDropdown }: { currentPa
         if (!link.open) return null;
         return (
           <motion.div
-            className={`hover:cursor-pointer hover:bg-gray-500 text-center py-2.5 rounded-md ${currentPage === link.href ? 'bg-teal-600 hover:bg-teal-500' : ''}`}
+            className={`hover:cursor-pointer hover:bg-gray-800 text-center py-2.5 rounded-md ${currentPage === link.href ? 'bg-teal-500 hover:bg-teal-400' : ''}`}
             onClick={() => {
               onLinkClick(link.href);
               window.location.href = link.href;
@@ -123,18 +124,19 @@ const MobileDropDown = ({ currentPage, onLinkClick, closeDropdown }: { currentPa
         );
       })}
       <motion.div
-        className="hover:cursor-pointer bg-teal-500
+        className="hover:cursor-pointer bg-teal-500 hover:bg-teal-400
         text-center text-xl py-2.5 rounded-md
-        mt-2.5"
+        mt-2.5 flex justify-center items-center"
         whileHover={{
           y: -5,
         }}
         onClick={() => {
-          window.location.href = '/';
+          window.location.href = 'https://www.instagram.com/junior_dev175/';
           closeDropdown(); // Close dropdown after clicking link
         }}
       >
-        <p className="text-epic-black">addyouemail@here.com</p>
+        <BsInstagram className='mr-2' />
+        <p className="text-epic-black">Contact Me</p>
       </motion.div>
     </motion.div>
   );
