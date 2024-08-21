@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { JetBrains_Mono } from 'next/font/google'
 
-const inter = JetBrains_Mono({ subsets: ["cyrillic"] })
+const inter = JetBrains_Mono({ subsets: ["cyrillic-ext"] })
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

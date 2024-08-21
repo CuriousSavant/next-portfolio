@@ -7,13 +7,13 @@ import { FC } from "react";
 
 export const About: FC = () => {
 	return (
-		<div className="w-full mx-auto flex flex-col md:flex-row text-center md:text-left">
-			<div className="w-full md:w-1/2 pt-28 flex flex-col mx-auto">
+		<div className="w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 text-center md:text-left">
+			<div className="flex flex-col pt-28 mx-auto pr-10">
 				<p className="text-md tracking-tightest font-bold">
-					<Highlight>Being a&nbsp;{CONFIG.TITLE}...</Highlight>
+					<Highlight>{CONFIG.TITLE}...</Highlight>
 				</p>
-				<h1 className="text-5xl tracking-[-5px] text-white">
-					I am "BatMan" <Highlight>&amp;</Highlight> how did I get here?
+				<h1 className="text-5xl text-white font-prompt">
+					เว็บส่วนตัวครับ ทำขึ้นมาเล่นๆไม่จริงจัง
 				</h1>
 				<div className="mt-4">
 					<p className="text-white text-md">
@@ -25,7 +25,7 @@ export const About: FC = () => {
 				</div>
 			</div>
 			<h1 className="pt-16 text-3xl font-semibold md:hidden">Language Skill</h1>
-			<div className="flex flex-col items-center justify-center md:mx-auto pt-20 px-4 md:p-0">
+			<div className="flex flex-col items-center justify-center pt-20 md:p-0">
 				{codeData.map((code, index) => (
 					<CodeComponent key={index} {...code} />
 				))}

@@ -5,12 +5,11 @@ import { CONFIG } from '@/lib/index'
 import Highlight from './Highlight'
 import { motion } from 'framer-motion'
 
-
 const Hero = () => {
   return (
     <div className='px-2.5 md:p-2 lg:p-0'>
-      <div className='w-full mt-0 md:mt-20 flex flex-row text-center md:text-left'>
-        <div className='flex flex-col w-full md:w-4/5 lg:w-1/2 pt-16 gap-4 mx-auto'>
+      <div className='w-full mt-0 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-4'>
+        <div className='flex flex-col pt-16 gap-4 mx-auto'>
           <h1 className='text-5xl md:text-6xl tracking-tighter text-white'>
             {CONFIG.NAME}
             <p className="text-3xl hidden md:block">
@@ -47,7 +46,7 @@ const Hero = () => {
             <br />
           </p>
         </div>
-        <div className="md:flex flex-col w-1/2 hidden">
+        <div className="md:flex hidden justify-center items-center">
           <motion.div
             className="flex flex-col items-center justify-center"
             whileHover={{ scale: 1.025 }}
@@ -63,7 +62,6 @@ const Hero = () => {
     </div>
   );
 };
-
 
 interface LanguageLinkProps {
   name: string;
@@ -82,4 +80,4 @@ const LanguageLink = ({ name, href, color }: LanguageLinkProps) => {
   );
 };
 
-export default Hero
+export default Hero;
