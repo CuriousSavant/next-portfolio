@@ -72,7 +72,7 @@ const Navbar = () => {
             whileHover={{
               y: -5
             }}
-            onClick={toggleDropdown}
+            onClick={() => window.location.href = 'https://www.instagram.com/junior_dev175/'}
           >
             <MdEmail className='mr-2' />
             Contact Me
