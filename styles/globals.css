@@ -42,3 +42,8 @@ body {
   transition-duration: 200ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.tranform-cus:hover {
+  box-shadow: 4px 4px 0 0 #64ffda;
+  transform: translate(-5px, -5px);
+}

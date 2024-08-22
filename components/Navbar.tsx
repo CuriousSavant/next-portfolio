@@ -66,15 +66,14 @@ const Navbar = () => {
           </ul>
         </div>
         <div className='text-black'>
-          <motion.button
-            className='bg-teal-500 text-lg p-2 smooth rounded-md font-semibold hidden md:flex items-center hover:bg-teal-600'
-            whileHover={{
-              y: -5
-            }}
+          <button
+            className='border border-teal-500 text-teal-500 text-lg p-2 smooth font-semibold hidden md:flex items-center
+            focus:bg-teal-500 focus:text-black tranform-cus
+            '
             onClick={() => window.location.href = 'https://www.instagram.com/junior_dev175/'}>
             <BsInstagram className='mr-2' />
             Contact Me
-          </motion.button>
+          </button>
           <button
             className='block md:hidden bg-teal-500 p-2.5 rounded-md smooth hover:bg-teal-600'
             onClick={toggleDropdown}
@@ -141,4 +140,3 @@ const MobileDropDown = ({ currentPage, onLinkClick, closeDropdown }: { currentPa
 };
 
 export default Navbar;
-
