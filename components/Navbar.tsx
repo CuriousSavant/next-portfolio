@@ -3,8 +3,7 @@
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { MdMenu } from 'react-icons/md';
-import { CONFIG } from '@/lib';
-import { motion, AnimatePresence } from 'framer-motion';
+import { CONFIG } from '@/lib'; import { motion, AnimatePresence } from 'framer-motion';
 import Highlight from './Highlight';
 import { BsInstagram } from 'react-icons/bs';
 

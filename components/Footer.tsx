@@ -10,10 +10,6 @@ const linkSocial = [
         icon: <BsGithub />,
         href: 'https://github.com/CuriousSavant',
     },
-    {
-        icon: <BsInstagram />,
-        href: 'https://www.instagram.com/junior_dev175/',
-    },
     // add social media here....
 ]
 
