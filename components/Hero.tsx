@@ -11,7 +11,7 @@ const Hero = () => {
     <div className='px-2.5 md:p-2 lg:p-0'>
       <div className='w-full mt-0 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-4'>
         <div className='flex flex-col pt-16 gap-4 mx-auto'>
-          <h1 className='text-5xl md:text-6xl tracking-tighter text-white text-center md:text-start'>
+          <h1 className='text-4xl md:text-6xl tracking-tighter text-white text-center md:text-start'>
             {CONFIG.NAME}
             <p className="text-3xl hidden md:block">
               <i>Aka&nbsp;</i>

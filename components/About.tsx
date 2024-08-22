@@ -8,11 +8,11 @@ import { FC } from "react";
 export const About: FC = () => {
 	return (
 		<div className="w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 text-center md:text-left">
-			<div className="flex flex-col justify-center pt-16 md:pr-10">
+			<div className="flex flex-col justify-center pt-16 md:pr-10 px-2 md:px-0">
 				<p className="text-md font-bold">
 					<Highlight>{CONFIG.TITLE}...</Highlight>
 				</p>
-				<h1 className="text-4xl md:text-5xl text-white font-prompt">
+				<h1 className="text-3xl md:text-5xl text-white font-prompt">
 					A personal website to showcase my skills.
 				</h1>
 				<p className="mt-4 text-white text-md">

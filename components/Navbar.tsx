@@ -48,7 +48,7 @@ const Navbar = () => {
             }}
             className="flex flex-row justify-center items-center text-white text-3xl mr-5"
           >
-            <div className="hover:cursor-pointer">
+            <div className="hover:cursor-pointer text-lg md:text-3xl">
               {CONFIG.NICKNAME}
             </div>
           </h1>
