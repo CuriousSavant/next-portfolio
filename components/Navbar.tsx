@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
-import { MdEmail, MdMenu } from 'react-icons/md';
+import { MdMenu } from 'react-icons/md';
 import { CONFIG } from '@/lib';
 import { motion, AnimatePresence } from 'framer-motion';
 import Highlight from './Highlight';
@@ -72,9 +72,8 @@ const Navbar = () => {
             whileHover={{
               y: -5
             }}
-            onClick={() => window.location.href = 'https://www.instagram.com/junior_dev175/'}
-          >
-            <MdEmail className='mr-2' />
+            onClick={() => window.location.href = 'https://www.instagram.com/junior_dev175/'}>
+            <BsInstagram className='mr-2' />
             Contact Me
           </motion.button>
           <button
