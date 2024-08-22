@@ -67,7 +67,7 @@ const Navbar = () => {
         </div>
         <div className='text-black'>
           <button
-            className='border border-teal-500 text-teal-500 text-lg p-2 smooth font-semibold 
+            className='border-2 border-teal-500 text-teal-500 text-lg p-2 smooth font-semibold 
             hidden md:flex items-center focus:bg-teal-500 focus:text-black rounded-md
             hover:bg-teal-500 hover:text-black'
             onClick={() => window.location.href = 'https://www.instagram.com/junior_dev175/'}>
