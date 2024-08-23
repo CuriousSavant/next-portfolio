@@ -1,11 +1,10 @@
-'use client';
-
-import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
-import { MdMenu } from 'react-icons/md';
-import { CONFIG } from '@/lib'; import { motion, AnimatePresence } from 'framer-motion';
-import Highlight from './Highlight';
+import { MdMenu, MdDarkMode, MdLightMode } from 'react-icons/md';
 import { BsInstagram } from 'react-icons/bs';
+import Link from 'next/link';
+import { CONFIG } from '@/lib';
+import { motion, AnimatePresence } from 'framer-motion';
+import Highlight from './Highlight';
 
 const NavLinks = [
   {
@@ -22,19 +21,28 @@ const NavLinks = [
 
 const Navbar = () => {
   const [currentPage, setCurrentPage] = useState<string>('/');
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
 
   useEffect(() => {
     setCurrentPage(window.location.pathname);
+    const savedTheme = localStorage.getItem('theme') as 'light' | 'dark';
+    if (savedTheme) {
+      setTheme(savedTheme);
+      document.documentElement.classList.add(savedTheme);
+    }
   }, []);
-
-  const handleLinkClick = (href: string) => {
-    setCurrentPage(href);
-  };
-
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
     setIsDropdownOpen((prev) => !prev);
+  };
+
+  const toggleTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    document.documentElement.classList.remove('light', 'dark');
+    document.documentElement.classList.add(newTheme);
+    localStorage.setItem('theme', newTheme);
   };
 
   return (
@@ -52,7 +60,7 @@ const Navbar = () => {
               <li key={index}>
                 <Link
                   href={link.href}
-                  onClick={() => handleLinkClick(link.href)}
+                  onClick={() => setCurrentPage(link.href)}
                   className={`${currentPage === link.href ? 'text-teal-500 font-bold border-b-2 border-teal-500' : 'text-white'}`}>
                   /{link.name}
                 </Link>
@@ -60,7 +68,7 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-        <div className='text-black'>
+        <div className='flex items-center text-black'>
           <button
             className='border-2 border-teal-500 text-teal-500 text-lg p-2 smooth 
             font-semibold hidden md:flex items-center focus:bg-teal-500
@@ -74,10 +82,15 @@ const Navbar = () => {
             onClick={toggleDropdown}>
             <MdMenu />
           </button>
+          <button
+            className='ml-4 p-2 rounded-full bg-gray-700 dark:bg-gray-200 hover:bg-gray-800 dark:hover:bg-gray-300'
+            onClick={toggleTheme}>
+            {theme === 'light' ? <MdDarkMode size={24} /> : <MdLightMode size={24} />}
+          </button>
         </div>
       </nav >
       <AnimatePresence>
-        {isDropdownOpen && <MobileDropDown currentPage={currentPage} onLinkClick={handleLinkClick} closeDropdown={toggleDropdown} />}
+        {isDropdownOpen && <MobileDropDown currentPage={currentPage} onLinkClick={setCurrentPage} closeDropdown={toggleDropdown} />}
       </AnimatePresence>
     </div >
   );
