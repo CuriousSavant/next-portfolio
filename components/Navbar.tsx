@@ -86,7 +86,7 @@ const Navbar = () => {
 const MobileDropDown = ({ currentPage, onLinkClick, closeDropdown }: { currentPage: string, onLinkClick: (href: string) => void, closeDropdown: () => void }) => {
   return (
     <motion.div
-      className="fixed top-20 w-screen px-10
+      className="fixed top-20 w-screen px-10 py-8
       flex flex-col overflow-y-scroll bg-gray-100
       shadow-xl space-y-2"
       initial={{ opacity: 0, y: -20 }}
