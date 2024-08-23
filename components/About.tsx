@@ -53,7 +53,7 @@ const CodeComponent = ({ lang, level, logo }: ICodeComponent) => {
 
 	return (
 		<motion.div
-			className="w-full md:w-[400px] h-16 md:h-20 bg-gray-800 flex items-center rounded-lg p-2"
+			className="w-full md:w-[400px] h-16 md:h-20 bg-gray-200 dark:bg-gray-800 flex items-center rounded-lg p-2"
 			whileHover={{ scale: 1.05 }}
 		>
 			<img
@@ -63,7 +63,7 @@ const CodeComponent = ({ lang, level, logo }: ICodeComponent) => {
 			/>
 			<div className="flex flex-1 flex-col">
 				<p className="text-white text-lg font-semibold">{lang}</p>
-				<div className="relative w-full h-2 bg-gray-200 dark:bg-gray-600 rounded-full mt-1">
+				<div className="relative w-full h-2 bg-gray-600 rounded-full mt-1">
 					<motion.div
 						animate={{ width: fLevel }}
 						transition={{ duration: 1 }}
