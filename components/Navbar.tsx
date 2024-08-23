@@ -61,7 +61,7 @@ const Navbar = () => {
                 <Link
                   href={link.href}
                   onClick={() => setCurrentPage(link.href)}
-                  className={`${currentPage === link.href ? 'text-teal-500 font-bold border-b-2 border-teal-500' : 'text-white'}`}>
+                  className={`${currentPage === link.href ? 'text-teal-500 font-bold border-b-2 border-teal-500' : 'text-black dark:text-white'}`}>
                   /{link.name}
                 </Link>
               </li>
@@ -83,7 +83,7 @@ const Navbar = () => {
             <MdMenu />
           </button>
           <button
-            className='ml-4 p-2 rounded-full bg-gray-700 dark:bg-gray-200 hover:bg-gray-800 dark:hover:bg-gray-300'
+            className='ml-4 p-2 rounded-full dark:bg-gray-200 dark:hover:bg-gray-300'
             onClick={toggleTheme}>
             {theme === 'light' ? <MdDarkMode size={24} /> : <MdLightMode size={24} />}
           </button>
