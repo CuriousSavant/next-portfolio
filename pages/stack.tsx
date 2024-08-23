@@ -18,7 +18,7 @@ const StackPage = () => {
             <motion.div
               key={index}
               whileHover={{ y: -5 }}
-              className='cursor-pointer bg-gray-800 flex flex-col justify-center items-center p-4 md:w-128 md:h-128 rounded-md'
+              className='cursor-pointer bg-gray-400 dark:bg-gray-800 flex flex-col justify-center items-center p-4 md:w-128 md:h-128 rounded-md'
             >
               <a href={icon.href} className='relative w-24 h-24'>
                 <Image
