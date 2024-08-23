@@ -43,7 +43,7 @@ const Navbar = () => {
         <div className='flex items-center'>
           <h1 onClick={() => { window.location.href = "/" }}
             className="flex flex-row justify-center items-center text-white text-3xl mr-5">
-            <div className="hover:cursor-pointer text-xl md:text-3xl dark:text-white">
+            <div className="hover:cursor-pointer text-xl md:text-3xl text-gray-900 dark:text-white">
               {CONFIG.NICKNAME}
             </div>
           </h1>
