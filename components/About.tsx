@@ -12,10 +12,10 @@ export const About: FC = () => {
 				<p className="text-md font-bold">
 					<Highlight>{CONFIG.TITLE}...</Highlight>
 				</p>
-				<h1 className="text-3xl md:text-5xl text-white font-prompt">
+				<h1 className="text-3xl md:text-5xl text-gray-900 dark:text-white font-prompt">
 					A personal website to showcase my skills.
 				</h1>
-				<p className="mt-4 text-white text-md">
+				<p className="mt-4 text-black dark:text-white text-md">
 					Hello! I'm {CONFIG.NAME}, a passionate Developer specializing in <Highlight>software</Highlight> and web applications. With experience in <Highlight>TypeScript</Highlight>, <Highlight>Java</Highlight>, and <Highlight>C++</Highlight>, I am currently enhancing my skills with <Highlight>Next.js</Highlight> and <Highlight>Prisma</Highlight>.
 					<br /><br />
 					For anyone who wants to build upon what I've done, feel free to do so. I give my permission.
@@ -63,7 +63,7 @@ const CodeComponent = ({ lang, level, logo }: ICodeComponent) => {
 			/>
 			<div className="flex flex-1 flex-col">
 				<p className="text-white text-lg font-semibold">{lang}</p>
-				<div className="relative w-full h-2 bg-gray-600 rounded-full mt-1">
+				<div className="relative w-full h-2 bg-gray-200 dark:bg-gray-600 rounded-full mt-1">
 					<motion.div
 						animate={{ width: fLevel }}
 						transition={{ duration: 1 }}
