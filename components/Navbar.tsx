@@ -41,12 +41,8 @@ const Navbar = () => {
     <div className='w-full px-2.5 md:p-2 lg:p-0'>
       <nav className='h-24 flex justify-between items-center'>
         <div className='flex items-center'>
-          <h1
-            onClick={() => {
-              window.location.href = "/";
-            }}
-            className="flex flex-row justify-center items-center text-white text-3xl mr-5"
-          >
+          <h1 onClick={() => { window.location.href = "/" }}
+            className="flex flex-row justify-center items-center text-white text-3xl mr-5">
             <div className="hover:cursor-pointer text-lg md:text-3xl">
               {CONFIG.NICKNAME}
             </div>
@@ -57,8 +53,7 @@ const Navbar = () => {
                 <Link
                   href={link.href}
                   onClick={() => handleLinkClick(link.href)}
-                  className={`${currentPage === link.href ? 'text-teal-500 font-bold border-b-2 border-teal-500' : ''}`}
-                >
+                  className={`${currentPage === link.href ? 'text-teal-500 font-bold border-b-2 border-teal-500' : ''}`}>
                   /{link.name}
                 </Link>
               </li>
@@ -76,16 +71,15 @@ const Navbar = () => {
           </button>
           <button
             className='block md:hidden bg-teal-500 p-2.5 rounded-md smooth hover:bg-teal-600'
-            onClick={toggleDropdown}
-          >
+            onClick={toggleDropdown}>
             <MdMenu />
           </button>
         </div>
-      </nav>
+      </nav >
       <AnimatePresence>
         {isDropdownOpen && <MobileDropDown currentPage={currentPage} onLinkClick={handleLinkClick} closeDropdown={toggleDropdown} />}
       </AnimatePresence>
-    </div>
+    </div >
   );
 };
 

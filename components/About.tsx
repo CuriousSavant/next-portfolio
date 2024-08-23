@@ -48,7 +48,7 @@ const codeData: ICodeComponent[] = [
 ];
 
 const CodeComponent = ({ lang, level, logo }: ICodeComponent) => {
-	const fLevel =
+	const fLevel = 
 		level === "w-full" ? "100%" : level === "w-2/3" ? "66.6%" : "33.3%";
 
 	return (
