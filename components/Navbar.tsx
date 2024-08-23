@@ -43,7 +43,7 @@ const Navbar = () => {
         <div className='flex items-center'>
           <h1 onClick={() => { window.location.href = "/" }}
             className="flex flex-row justify-center items-center text-white text-3xl mr-5">
-            <div className="hover:cursor-pointer text-lg md:text-3xl">
+            <div className="hover:cursor-pointer text-xl md:text-3xl dark:text-white">
               {CONFIG.NICKNAME}
             </div>
           </h1>
@@ -53,7 +53,7 @@ const Navbar = () => {
                 <Link
                   href={link.href}
                   onClick={() => handleLinkClick(link.href)}
-                  className={`${currentPage === link.href ? 'text-teal-500 font-bold border-b-2 border-teal-500' : ''}`}>
+                  className={`${currentPage === link.href ? 'text-teal-500 font-bold border-b-2 border-teal-500' : 'text-white'}`}>
                   /{link.name}
                 </Link>
               </li>
