@@ -5,8 +5,9 @@ import Link from 'next/link';
 import { CONFIG } from '@/lib';
 import { motion, AnimatePresence } from 'framer-motion';
 import Highlight from './Highlight';
+import Logo from './logo';
 
-const NavLinks = [
+const navLinks = [
   {
     name: 'home',
     href: '/',
@@ -47,26 +48,24 @@ const Navbar = () => {
 
   return (
     <div className='w-full px-2.5 md:p-2 lg:p-0'>
-      <nav className='h-24 flex justify-between items-center'>
+      <nav className='h-32 flex justify-between items-center'>
         <div className='flex items-center'>
           <h1 onClick={() => { window.location.href = "/" }}
             className="flex flex-row justify-center items-center text-white text-3xl mr-5">
             <div className="hover:cursor-pointer text-xl md:text-3xl text-gray-900 dark:text-white">
-              {CONFIG.NICKNAME}
+              <Logo />
             </div>
           </h1>
-          <ul className='md:flex space-x-4 ml-12 hidden'>
-            {NavLinks.map((link, index) => (
-              <li key={index}>
-                <Link
-                  href={link.href}
-                  onClick={() => setCurrentPage(link.href)}
-                  className={`${currentPage === link.href ? 'text-teal-500 font-bold border-b-2 border-teal-500' : 'text-black dark:text-white'}`}>
-                  /{link.name}
-                </Link>
-              </li>
+          <div className='md:flex space-x-4 ml-12 hidden'>
+            {navLinks.map((link, index) => (
+              <Link
+                href={link.href}
+                onClick={() => setCurrentPage(link.href)}
+                className={`${currentPage === link.href ? 'text-teal-500 font-bold border-b-2 border-teal-500' : 'text-black dark:text-white'}`}>
+                /{link.name}
+              </Link>
             ))}
-          </ul>
+          </div>
         </div>
         <div className='flex items-center text-black'>
           <button
@@ -107,7 +106,7 @@ const MobileDropDown = ({ currentPage, onLinkClick, closeDropdown }: { currentPa
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.3 }}
     >
-      {NavLinks.map((link, key) => {
+      {navLinks.map((link, key) => {
         if (!link.open) return null;
         return (
           <motion.div

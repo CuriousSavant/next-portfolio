@@ -8,7 +8,7 @@ import { motion } from 'framer-motion'
 const Hero = () => {
   return (
     <div className='px-2.5 md:p-2 lg:p-0'>
-      <div className='w-full mt-0 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-4'>
+      <div className='w-full mt-0 md:mt-16 grid grid-cols-1 md:grid-cols-2 gap-8'>
         <div className='flex flex-col pt-16 gap-4 mx-auto'>
           <h1 className='text-4xl md:text-6xl tracking-tighter text-gray-900 dark:text-white text-center md:text-start'>
             {CONFIG.NAME}
@@ -40,7 +40,7 @@ const Hero = () => {
             <img
               src={CONFIG.AVATAR_URL}
               alt="curiousSavant"
-              className="mx-auto md:h-128 md:w-128 max-w-md w-full object-cover rounded-3xl"
+              className="rounded-3xl"
             />
           </motion.div>
         </div>

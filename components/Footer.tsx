@@ -24,7 +24,7 @@ const Footer = () => {
                         whileHover={{
                             y: -5,
                         }}>
-                        <Link href={link.href} className='hover:text-pink-600 transition duration-150 ease-in-out'>{link.icon}</Link>
+                        <Link href={link.href} className='dark:text-white text-gray-900 hover:text-teal-600 transition duration-150 ease-in-out'>{link.icon}</Link>
                     </motion.div>
                 ))}
             </div>

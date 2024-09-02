@@ -48,12 +48,12 @@ const codeData: ICodeComponent[] = [
 ];
 
 const CodeComponent = ({ lang, level, logo }: ICodeComponent) => {
-	const fLevel = 
+	const fLevel =
 		level === "w-full" ? "100%" : level === "w-2/3" ? "66.6%" : "33.3%";
 
 	return (
 		<motion.div
-			className="w-full md:w-[400px] h-16 md:h-20 bg-gray-300 dark:bg-gray-800 flex items-center rounded-lg p-2"
+			className="w-full md:w-[400px] h-16 md:h-20 bg-gray-200 dark:bg-gray-900 flex items-center rounded-lg p-2"
 			whileHover={{ scale: 1.05 }}
 		>
 			<img
