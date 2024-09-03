@@ -1,8 +1,9 @@
+'use client'
+
 import React, { useState, useEffect } from 'react';
 import { MdMenu, MdDarkMode, MdLightMode } from 'react-icons/md';
 import { BsInstagram } from 'react-icons/bs';
 import Link from 'next/link';
-import { CONFIG } from '@/lib';
 import { motion, AnimatePresence } from 'framer-motion';
 import Highlight from './Highlight';
 import Logo from './logo';
@@ -81,11 +82,15 @@ const Navbar = () => {
             onClick={toggleDropdown}>
             <MdMenu />
           </button>
-          <button
+          <motion.button
             className='ml-4 p-2 rounded-full dark:bg-gray-200 dark:hover:bg-gray-300'
-            onClick={toggleTheme}>
+            onClick={toggleTheme}
+            whileHover={{ scale: 1.1 }} // แอนิเมชันเมื่อ hover
+            animate={{ rotate: theme === 'light' ? 0 : 180 }} // แอนิเมชันหมุน
+            transition={{ duration: 0.5 }} // กำหนดระยะเวลาของแอนิเมชัน
+          >
             {theme === 'light' ? <MdDarkMode size={24} /> : <MdLightMode size={24} />}
-          </button>
+          </motion.button>
         </div>
       </nav >
       <AnimatePresence>
