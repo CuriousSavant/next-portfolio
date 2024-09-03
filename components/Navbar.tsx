@@ -71,7 +71,7 @@ const Navbar = () => {
           <button
             className='border-2 border-teal-500 text-teal-500 text-lg p-2 smooth 
             font-semibold hidden md:flex items-center focus:bg-teal-500
-            focus:text-black rounded-md hover:bg-teal-500 hover:text-black'
+            focus:text-black rounded-md hover:bg-teal-500 hover:text-gray-200'
             onClick={() => window.location.href = 'https://www.instagram.com/junior_dev175/'}>
             <BsInstagram className='mr-2' />
             Contact Me

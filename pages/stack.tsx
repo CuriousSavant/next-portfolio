@@ -9,9 +9,9 @@ const StackPage = () => {
   return (
     <div className='mt-16 w-full'>
       <div className='flex flex-col text-center'>
-        <div>
+        <div className='dark:text-white text-black'>
           <h1 className='text-3xl mb-2'>Tech Stack</h1>
-          <p>Here are the technologies I’m currently using.</p>
+          <p className='font-thai'>นี่เป็นเทคโนโลยีต่างๆที่ผมใช้ และ กำลังเรียนรู้</p>
         </div>
         <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 pt-16 place-items-center'>
           {stackProps.map((icon, index) => (

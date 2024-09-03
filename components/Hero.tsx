@@ -9,27 +9,13 @@ const Hero = () => {
   return (
     <div className='px-2.5 md:p-2 lg:p-0'>
       <div className='w-full mt-0 md:mt-16 grid grid-cols-1 md:grid-cols-2 gap-8'>
-        <div className='flex flex-col pt-16 gap-4 mx-auto'>
+        <div className='flex flex-col pt-16 gap-4'>
           <h1 className='text-4xl md:text-6xl tracking-tighter text-gray-900 dark:text-white text-center md:text-start'>
             {CONFIG.NAME}
-            <p className="text-3xl hidden md:block">
-              <i>Aka&nbsp;</i>
-              <Highlight>{CONFIG.AKA}</Highlight>
-            </p>
           </h1>
-          <p className="mt-6 text-gray-900 dark:text-white text-md text-center md:text-start">
-            I am {2024 - 2007}, still a student and not ready to take on work yet. Currently, I have various skills such as{" "}
-            <LanguageLink
-              name={"typescript"}
-              href={"https://www.typescriptlang.org/"}
-              color={"text-blue-500"}
-            /> and,
-            <LanguageLink
-              name={"java"}
-              href={"https://www.java.com/"}
-              color={"text-yellow-600"}
-            /> The main tools I use are just these for now. You can view my <Highlight>stack</Highlight> on the Stack page.
-            <br />
+          <p className="mt-6 md:w-4/5 text-gray-900 dark:text-white text-md text-center md:text-start font-thai">
+            สวัสดีครับ ผมชื่อ <Highlight>อาร์ม</Highlight> อายุ <Highlight>{2024 - 2007}</Highlight> ปี
+            ผมสร้างเว็บนี้ขึ้นมาเพื่อทดสอบ skill ของผม
           </p>
         </div>
         <div className="md:flex hidden justify-center items-center">
@@ -46,23 +32,6 @@ const Hero = () => {
         </div>
       </div>
     </div>
-  );
-};
-
-interface LanguageLinkProps {
-  name: string;
-  href: string;
-  color: string
-}
-
-const LanguageLink = ({ name, href, color }: LanguageLinkProps) => {
-  return (
-    <span
-      className={color + " " + "hover:cursor-pointer"}
-      onClick={() => (window.location.href = href)}
-    >
-      {name}
-    </span>
   );
 };
 

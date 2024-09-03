@@ -4,11 +4,11 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { JetBrains_Mono } from 'next/font/google'
 
-const inter = JetBrains_Mono({ subsets: ["cyrillic-ext"] })
+const jetbrains_mono = JetBrains_Mono({ subsets: ["cyrillic"] })
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className={`${inter.className} max-w-5xl mx-auto min-h-screen`}>
+    <div className={`${jetbrains_mono.className} max-w-5xl mx-auto min-h-screen`}>
       <Navbar />
       <Component {...pageProps} />
       <Footer />

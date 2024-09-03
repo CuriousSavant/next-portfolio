@@ -8,18 +8,26 @@ import { FC } from "react";
 export const About: FC = () => {
 	return (
 		<div className="w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 text-center md:text-left">
-			<div className="flex flex-col justify-center pt-16 md:pr-10 px-2 md:px-0">
+			<div className="flex flex-col justify-center pt-16 md:pr-10 px-2 md:px-0 font-thai">
 				<p className="text-md font-bold">
-					<Highlight>{CONFIG.TITLE}...</Highlight>
+					<Highlight>สร้างเว็้บนี้ขึ้นมาเพื่อทดสอบ skill</Highlight>
 				</p>
-				<h1 className="text-3xl md:text-5xl text-gray-900 dark:text-white font-prompt">
-					A personal website to showcase my skills.
+				<h1 className="text-3xl md:text-5xl text-gray-900 dark:text-white">
+					เกี่ยวกับผม
 				</h1>
-				<p className="mt-4 text-black dark:text-white text-md">
-					Hello! I'm {CONFIG.NAME}, a passionate Developer specializing in <Highlight>software</Highlight> and web applications. With experience in <Highlight>TypeScript</Highlight>, <Highlight>Java</Highlight>, and <Highlight>C++</Highlight>, I am currently enhancing my skills with <Highlight>Next.js</Highlight> and <Highlight>Prisma</Highlight>.
+				<div className="mt-4 text-black dark:text-white text-md">
+					สวัสดีอีกครั้งครับ ผม {CONFIG.NAME}, ผมชอบสร้าง <Highlight>software</Highlight>, web applications. ด้วยภาษา และ เครื่องมือต่างๆเช่น <Highlight color="blue">typescript</Highlight>, <Highlight color="yellow">Java</Highlight>, และ <Highlight color="pink">C++</Highlight>, ช่วงนี้กำลังเรียนรู้เครื่องมืออย่าง <Highlight color="pink">Nestjs</Highlight> และ <Highlight>Prisma</Highlight>.
+					ส่วนเป้าหมายคือ <Highlight>senior developer</Highlight> สาเหตุมีอยู่สองส่วน <br />
+					<div className="mt-2">
+						<Highlight color="pink">1.</Highlight>ไม่อยากไปขายหมู ขายไก่หรืออะไรก็ตาม ด้วยความที่ผมเป็นคนไม่ชอบออกนอกหน้าเลยไม่ค่อยชอบอะไรแบบนี้สักเท่าไหร่ <br />
+						<Highlight color="pink">2.</Highlight> อยากรู้ว่าคนที่ไม่ได้จบตรงสาย หรือ เริ่มจาก 0 เรียนจาก Youtube หาความรู้เพิ่มเดิมจาก internet สามารถเป็นถึง senior ได้มั้ย?
+					</div>
 					<br /><br />
-					For anyone who wants to build upon what I've done, feel free to do so. I give my permission.
-				</p>
+					<div className="space-y-2">
+						<p>For anyone who wants to build upon what I've done, feel free to do so. I give my permission.</p>
+						<p>สำหรับใครที่ต้องการต่อยอดเว็บนี้ หรือ นำไปต่อยอดเป็นของตัวเองสามารถนำ template นี้ไปใช้ได้เลยครับ😊</p>
+					</div>
+				</div>
 			</div>
 
 			{/* Skills and Tools Section */}
@@ -31,7 +39,7 @@ export const About: FC = () => {
 					))}
 				</div>
 			</div>
-		</div>
+		</div >
 	);
 };
 
@@ -76,3 +84,20 @@ const CodeComponent = ({ lang, level, logo }: ICodeComponent) => {
 };
 
 export default About;
+
+interface LanguageLinkProps {
+	name: string;
+	href: string;
+	color: string
+}
+
+const LanguageLink = ({ name, href, color }: LanguageLinkProps) => {
+	return (
+		<span
+			className={color + " " + "hover:cursor-pointer"}
+			onClick={() => (window.location.href = href)}
+		>
+			{name}
+		</span>
+	);
+};

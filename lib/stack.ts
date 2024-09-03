@@ -53,4 +53,16 @@ export const stackProps = [
     href: "https://react.dev",
     alt: "logo react js",
   },
+  {
+    icon: "/asset/langs/nestjs.svg",
+    title: "Nestjs",
+    href: "https://react.dev",
+    alt: "logo react js",
+  },
+  {
+    icon: "/asset/langs/electronjs.svg",
+    title: "ElectronJs",
+    href: "https://react.dev",
+    alt: "logo react js",
+  },
 ];
