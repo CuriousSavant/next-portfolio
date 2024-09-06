@@ -5,8 +5,8 @@ import { MdMenu, MdDarkMode, MdLightMode } from 'react-icons/md';
 import { BsInstagram } from 'react-icons/bs';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import Highlight from './Highlight';
 import Logo from './logo';
+import { CgClose } from 'react-icons/cg';
 
 const navLinks = [
   {
@@ -85,9 +85,9 @@ const Navbar = () => {
           <motion.button
             className='ml-4 p-2 rounded-full dark:bg-gray-200 dark:hover:bg-gray-300'
             onClick={toggleTheme}
-            whileHover={{ scale: 1.1 }} // แอนิเมชันเมื่อ hover
-            animate={{ rotate: theme === 'light' ? 0 : 180 }} // แอนิเมชันหมุน
-            transition={{ duration: 0.5 }} // กำหนดระยะเวลาของแอนิเมชัน
+            whileHover={{ scale: 1.1 }}
+            animate={{ rotate: theme === 'light' ? 0 : 180 }}
+            transition={{ duration: 0.5 }}
           >
             {theme === 'light' ? <MdDarkMode size={24} /> : <MdLightMode size={24} />}
           </motion.button>
@@ -103,7 +103,7 @@ const Navbar = () => {
 const MobileDropDown = ({ currentPage, onLinkClick, closeDropdown }: { currentPage: string, onLinkClick: (href: string) => void, closeDropdown: () => void }) => {
   return (
     <motion.div
-      className="fixed top-20 w-screen px-10 py-8
+      className="fixed top-0 w-screen px-5 py-4
       flex flex-col overflow-y-scroll bg-gray-100
       dark:bg-gray-900 shadow-xl space-y-2"
       initial={{ opacity: 0, y: -20 }}
@@ -111,11 +111,14 @@ const MobileDropDown = ({ currentPage, onLinkClick, closeDropdown }: { currentPa
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.3 }}
     >
+      <motion.span onClick={closeDropdown} className='cursor-pointer flex py-2 justify-end'>
+        <CgClose className='text-white text-2xl' />
+      </motion.span>
       {navLinks.map((link, key) => {
         if (!link.open) return null;
         return (
           <motion.div
-            className={`hover:cursor-pointer hover:bg-gray-800 text-center py-2.5 rounded-md ${currentPage === link.href ? 'bg-teal-500 hover:bg-teal-400' : ''}`}
+            className={`hover:cursor-pointer text-center py-2.5 rounded-md ${currentPage === link.href ? 'bg-teal-500 hover:bg-teal-400' : ''}`}
             onClick={() => {
               onLinkClick(link.href);
               window.location.href = link.href;
@@ -125,7 +128,6 @@ const MobileDropDown = ({ currentPage, onLinkClick, closeDropdown }: { currentPa
             whileHover={{ y: -5 }}
           >
             <p className="text-gray-900 dark:text-white text-xl">
-              <Highlight>/</Highlight>
               {link.name}
             </p>
           </motion.div>
@@ -140,11 +142,11 @@ const MobileDropDown = ({ currentPage, onLinkClick, closeDropdown }: { currentPa
         }}
         onClick={() => {
           window.location.href = 'https://www.instagram.com/junior_dev175/';
-          closeDropdown(); // Close dropdown after clicking link
+          closeDropdown();
         }}
       >
-        <BsInstagram className='mr-2' />
-        <p className="text-epic-black">Contact Me</p>
+        <BsInstagram className='mr-2 text-white' />
+        <p className="text-white">Contact Me</p>
       </motion.div>
     </motion.div>
   );
