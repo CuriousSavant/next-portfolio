@@ -58,7 +58,7 @@ const Navbar = () => {
             </div>
           </h1>
           <div className='md:flex space-x-4 ml-12 hidden'>
-            {navLinks.map((link, index) => (
+            {navLinks.map((link) => (
               <Link
                 href={link.href}
                 onClick={() => setCurrentPage(link.href)}

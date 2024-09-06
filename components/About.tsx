@@ -9,18 +9,19 @@ export const About: FC = () => {
 	return (
 		<div className="w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 text-center md:text-left">
 			<div className="flex flex-col justify-center pt-16 md:pr-10 px-2 md:px-0 font-thai">
-				<p className="text-md font-bold">
-					<Highlight>สร้างเว็้บนี้ขึ้นมาเพื่อทดสอบ skill</Highlight>
-				</p>
 				<h1 className="text-3xl md:text-5xl text-gray-900 dark:text-white">
-					เกี่ยวกับผม
+					About Me
 				</h1>
 				<div className="mt-4 text-black dark:text-white text-md">
-					สวัสดีอีกครั้งครับ ผม {CONFIG.NAME}, ผมชอบสร้าง <Highlight>software</Highlight>, web applications. ด้วยภาษา และ เครื่องมือต่างๆเช่น <Highlight color="blue">typescript</Highlight>, <Highlight color="yellow">Java</Highlight>, และ <Highlight color="pink">C++</Highlight>, ช่วงนี้กำลังเรียนรู้เครื่องมืออย่าง <Highlight color="pink">Nestjs</Highlight> และ <Highlight>Prisma</Highlight>.
+					สวัสดีอีกครั้งครับ ผม <Highlight>{CONFIG.NAME}</Highlight>, ผมชอบสร้าง <Highlight>software</Highlight>, <Highlight>web applications.</Highlight> ด้วยภาษา และ เครื่องมือต่างๆเช่น typescript, Java, และ C++, ช่วงนี้กำลังเรียนรู้เครื่องมืออย่าง nestjs และ prisma.
 					ส่วนเป้าหมายคือ <Highlight>senior developer</Highlight> สาเหตุมีอยู่สองส่วน <br />
-					<div className="mt-2">
-						<Highlight color="pink">1.</Highlight>ไม่อยากไปขายหมู ขายไก่หรืออะไรก็ตาม ด้วยความที่ผมเป็นคนไม่ชอบออกนอกหน้าเลยไม่ค่อยชอบอะไรแบบนี้สักเท่าไหร่ <br />
-						<Highlight color="pink">2.</Highlight> อยากรู้ว่าคนที่ไม่ได้จบตรงสาย หรือ เริ่มจาก 0 เรียนจาก Youtube หาความรู้เพิ่มเดิมจาก internet สามารถเป็นถึง senior ได้มั้ย?
+					<div className="mt-6 space-y-2">
+						<div>
+							<Highlight color="pink">1.</Highlight>ไม่อยากไปขายหมู ขายไก่หรืออะไรก็ตาม ด้วยความที่ผมเป็นคนไม่ชอบออกนอกหน้าเลยไม่ค่อยชอบอะไรแบบนี้สักเท่าไหร่
+						</div>
+						<div>
+							<Highlight color="pink">2.</Highlight> อยากรู้ว่าคนที่ไม่ได้จบตรงสาย หรือ เริ่มจาก 0 เรียนจาก Youtube หาความรู้เพิ่มเดิมจาก internet สามารถเป็นถึง senior ได้มั้ย?
+						</div>
 					</div>
 					<br /><br />
 					<div className="space-y-2">
@@ -32,7 +33,6 @@ export const About: FC = () => {
 
 			{/* Skills and Tools Section */}
 			<div className="flex flex-col justify-center pt-16 px-6">
-				<h1 className="text-2xl md:text-3xl font-semibold">Language Skills</h1>
 				<div className="flex flex-col gap-4 mt-4">
 					{codeData.map((code, index) => (
 						<CodeComponent key={index} {...code} />
